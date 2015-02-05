@@ -1,0 +1,193 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto";
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+.paper-btn {
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #BBDEFB;
+    color: #fff;
+    background: none;
+    border: 1px solid transparent;
+}
+
+.paper-btn:hover {
+    color: #BBDEFB;
+    color: #fff;
+    border-color: #BBDEFB;
+}
+
+.paper-btn > i.fa {
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.nav-btn > i.fa {
+    line-height: 24px;
+    font-size: 1.2em;
+}
+
+.nav-btn {
+    left: 12px;
+    top: 8px;
+    z-index: 5;
+    position: fixed;
+}
+
+/*=============================
+    SIDE-NAV (LEFT)
+=============================*/
+
+.side-nav {
+
+    background: #fff;
+    color: #333;
+    display: block;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 240px;
+    z-index: 5;
+    bottom: 0;
+
+    visibility: hidden;
+    -webkit-transform: translateX(-241px);
+    -moz-transform: translateX(-241px);
+    -ms-transform: translateX(-241px);
+    -o-transform: translateX(-241px);
+    transform: translateX(-241px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.side-nav.side-nav-active {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.side-nav-wrapper {
+    position: relative;
+    padding-bottom: 96px;
+}
+
+.side-nav .logo {
+    height: 64px;
+    position: relative;
+    letter-spacing: 0;
+    line-height: 64px;
+    font-weight: 400;
+    background-color: #4DD0E1;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+
+}
+
+.logo a {
+    font-size: 24px;
+    line-height: 64px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+.side-nav nav {
+    font-size: 13px;
+    padding: 8px 0 10px 0;
+}
+
+.side-nav nav:first-of-type {
+    padding-top: 0;
+}
+
+.side-nav nav a {
+    border-left: 2px solid transparent;
+    color: #333;
+    font-weight: 400;
+    margin-top: 0;
+    padding: 15px 0 15px 22px;
+    display: block;
+    -webkit-transition: border-left 0.15s ease;
+    -moz-transition: border-left 0.15s ease;
+    -ms-transition: border-left 0.15s ease;
+    -o-transition: border-left 0.15s ease;
+    transition: border-left 0.15s ease;
+}
+
+.side-nav nav a:hover {
+    border-left: 2px solid #4DD0E1;
+    text-decoration: none;
+}
+.side-nav nav a.active {
+    color: #4DD0E1;
+    border-left: 2px solid #4DD0E1;
+}
+
+
+/*=============================
+    PAGE MASK - Overlay when SIDE BAR is active
+=============================*/
+
+.page-mask {
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    -webkit-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.page-mask.mask-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0;
+}

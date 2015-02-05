@@ -1,0 +1,168 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+header {
+    background: #4DD0E1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    color: #fff;
+    z-index: 2;
+}
+
+header .page-title {
+    height: 64px;
+    line-height: 64px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 72px;
+}
+
+.content {
+    max-width:1160px;
+    margin: 0 auto;
+
+    padding: 164px 100px 40px 100px;
+}
+
+@media screen and (max-width: 1100px) {
+    .content {
+        padding: 124px 60px 40px 60px;
+    }
+}
+
+
+.content-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+h1.section-title {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 16px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+.section-meta p {
+    float: left;
+    padding: 0 12px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.section-meta span {
+
+}
+.section-meta p:first-child {
+    padding-left: 0;
+}
+
+.section-meta p:nth-child(2) {
+
+}
+
+.section-meta:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.section-intro p {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.section-body {
+    line-height: 2em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.ripple-btn {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    -webkit-transition: color 0.3s ease, border 0.3s ease;
+    -moz-transition: color 0.3s ease, border 0.3s ease;
+    -ms-transition: color 0.3s ease, border 0.3s ease;
+    -o-transition: color 0.3s ease, border 0.3s ease;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+.flat-btn:hover, .ripple-btn:hover {
+    border: 1px solid #0097A7;
+    text-decoration: none;
+    color: #0097A7;
+    z-index: 1000;
+}
+
+
+/* ripples */
+/*nav styles*/
+.ripple-wrap {
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.14) 0 1px 2px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.14) 0 1px 2px 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.ripple-wrap:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.14) 0 4px 5px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.14) 0 4px 5px 0;
+}
+
+.ink {
+    display: block; position: absolute;
+    background: #0097A7;
+    border-radius: 100%;
+    transform: scale(0);
+}
+
+.ink.press {
+    -webkit-animation: ripple 0.45s linear;
+    -o-animation: ripple 0.45s linear;
+    animation: ripple 0.45s linear;
+}
+
+@-webkit-keyframes ripple {
+    0% {color: #fff;}
+    100% {opacity: 0; -webkit-transform: scale(2.5); color: #fff;}
+}
+
+@keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {opacity: 0; transform: scale(2.5);}
+}
